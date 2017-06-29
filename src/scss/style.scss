@@ -1,0 +1,55 @@
+@import "resolutions";
+@import "fonts";
+@import "colors";
+
+@mixin margin-padding($margin, $padding) {
+  margin: $margin;
+  padding: $padding;
+}
+*{
+  box-sizing: border-box;
+}
+.header{
+  margin: 0 auto;
+  &__logo{
+    text-align: center;
+    @include margin-padding(0 auto, 40px 0 0 0);
+  }
+  &__nav{
+    margin: 0 auto;
+    text-align: center;
+    li{
+      @include margin-padding(10px, 5px);
+      text-transform: uppercase;
+      list-style: none;
+      display: inline-block;
+      color: $font-gris-titulos;
+      font-weight: 500;
+    }
+  }
+}
+
+.library{
+  @include margin-padding(0, 10px 20px);
+  &__img{
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    @include margin-padding(0 0 20px 0, 30px );
+  }
+}
+
+.news{
+  @include margin-padding(0, 10px 20px);
+  &__1{
+    @include margin-padding(0 0 20px 0, 30px );
+    &--img{
+      width: 100%;
+    }
+  }
+}
+
+// $images : (
+//   library : method_podcast.png;
+//   news-feed : news-google-design.jpg;
+//   news-letter : gdlogo.png;
+// );
