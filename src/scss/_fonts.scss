@@ -1,3 +1,22 @@
 *{
   font-family: 'Roboto', sans-serif;}
-  
+
+$font-family-product : 'Product Sans';
+$font-family-mono : 'Roboto Mono';
+$font-size-max : (h1:2.25rem, h2:1.30rem);
+$font-size-min : (h1:1.5rem, h2:1rem);
+@each $h,$size in $font-size-max{
+ #{$h}{
+   font-size:$size;
+ }
+}
+@media (max-width : 768px) {
+  @each $h,$size in $font-size-min{
+   #{$h}{
+     font-size:$size;
+   }
+  }
+  .bd-padding{
+    padding: 0;
+  }
+}

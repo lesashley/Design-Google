@@ -2,12 +2,47 @@
 @import "fonts";
 @import "colors";
 
+body{
+  padding: 0 15%;
+}
+*{
+  box-sizing: border-box;
+}
+%font-mono{
+  color: $color-gris-fechas;
+  font-family: $font-family-mono;
+}
+%flex-box{
+  display: flex;
+}
+li{
+  list-style: none;
+}
+span{
+  @extend %font-mono;
+}
+h1,h2,h3,h4,h5,h6{
+  color: $color-gris-titulos;
+  font-weight: 500;
+  font-family: $font-family-product;
+}
+p{
+  color: $color-gris-texto;
+}
+hr{
+  margin: 20px 0;
+  border: 2px solid $color-azul;
+}
+a{
+  text-decoration: none;
+  color: $color-azul;
+}
 @mixin margin-padding($margin, $padding) {
   margin: $margin;
   padding: $padding;
 }
-*{
-  box-sizing: border-box;
+@mixin box-shadow{
+  box-shadow: 0px 2px 5px $color-shadow;
 }
 .header{
   margin: 0 auto;
@@ -18,38 +53,197 @@
   &__nav{
     margin: 0 auto;
     text-align: center;
-    li{
-      @include margin-padding(10px, 5px);
+    ul{
+      padding: 0;
+      position: relative;
+    }
+    &--hover{
+      @include margin-padding(10px, 0 5px);
+      color: $color-gris-texto;
       text-transform: uppercase;
-      list-style: none;
       display: inline-block;
-      color: $font-gris-titulos;
       font-weight: 500;
+      padding-bottom: 15px;
+      border-bottom: 3px solid rgb(255, 255, 255);
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    &--hidden1{
+      display: none;
+      left: 15%;
+      margin-left: 20px;
+      position: absolute;
+      width: 130px;
+      img{width: 100%;}
+    }
+    &--hidden2{
+      float: right;
+    }
+    &--hidden3{
+      display: none;
+      position: absolute;
+      right: 16%;
+    }
+    &--hover:hover{
+      border-bottom: 3px solid rgb(224, 226, 230);
+    }
+  }
+  &__hidden{
+    background-color:rgb(255, 255, 255) ;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 66px;
+    @include margin-padding(0,0);
+    @include box-shadow;
+  }
+  &__mobile{
+    @extend .header__hidden;
+    @extend %flex-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    display: none;
+    &--logo{
+      width: 140px;
+    }
+    &--hamburger{
+      color: rgb(0, 0, 0);
+      font-size: 1.5rem;
     }
   }
 }
 
 .library{
-  @include margin-padding(0, 10px 20px);
   &__img{
-    margin-bottom: 20px;
-    border: 1px solid gray;
-    @include margin-padding(0 0 20px 0, 30px );
+    @include margin-padding(0, 40px);
+    &--item{
+      width: 100%;
+    }
+    &--title{
+      color: $color-gris-titulos;
+      font-family: $font-family-product;
+    }
+  }
+  &__img:hover{
+    @include box-shadow;
   }
 }
 
 .news{
   @include margin-padding(0, 10px 20px);
   &__1{
-    @include margin-padding(0 0 20px 0, 30px );
+    @include margin-padding(0 0 20px 0, 20px 10px );
     &--img{
       width: 100%;
+    }
+    &--date{
+      @extend %font-mono;
+    }
+  }
+  &__2{
+    @include margin-padding(0 0 20px 0, 20px 10px );
+    &--date{
+      @extend %font-mono;
+    }
+    &--box{
+      margin-top: 50px;
+      background-color: #f1f3f4;
     }
   }
 }
 
-// $images : (
-//   library : method_podcast.png;
-//   news-feed : news-google-design.jpg;
-//   news-letter : gdlogo.png;
-// );
+@for $i from 1 through 6{
+  .articles__#{$i}{
+    @include margin-padding(0, 30px);
+    &--item{
+      width: 100%;
+    }
+    &--icon{
+      position: relative;
+      top: 10px;
+    }
+  }
+  .articles__#{$i}:hover{
+    @include box-shadow;
+  }
+}
+
+@for $i from 1 through 11{
+  .carousel__item#{$i}{
+    @include margin-padding(0, 30px);
+    &--img{
+      width: 100%;
+    }
+    &--social-media{
+      width: 30px;
+    }
+  }
+  .carousel__item#{$i}:hover{
+    @include box-shadow;
+  }
+}
+.carousel{
+  &__title{
+    @extend %flex-box;
+    align-items: center;
+    justify-content: space-between;
+    @include margin-padding(0, 30px);
+  }
+  padding-bottom: 50px;
+}
+
+.articles{
+  @extend %flex-box;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  &__5--img-circle{
+    width: 50px;
+    border-radius: 50%;
+  }
+  &__6--item-little{
+    width: 50px;
+  }
+  &__4--img{
+    width: 50px;
+  }
+}
+
+.footer{
+  &__top{
+    padding-right: 30px;
+    h4{
+      font-weight: bold;
+    }
+    &--list{
+      color: $color-gris-fechas;
+      @include margin-padding(0, 0);
+      display: inline-block;
+    }
+  }
+  &__below{
+    padding: 30px 0;
+    @extend %flex-box;
+    justify-content: space-between;
+    &--enlace{
+      color: $color-gris-fechas;
+    }
+  }
+}
+
+@media (max-width : 768px) {
+  .header__nav{
+    display: none;
+  }
+  .header__logo{
+    display: none;
+  }
+  .header__mobile{
+    display: block;
+    display: flex;
+  }
+  .footer{
+    display: none;
+  }
+}

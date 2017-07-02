@@ -6,76 +6,255 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Google Design</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,500|c:300,400|Material+Icons//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i|Roboto+Mono:300,400,500|Product+Sans:300,400|Material+Icons" rel="stylesheet">
   </head>
-  <body>
+  <body class="bd-padding">
     <header>
       <div class="row header">
         <div class="col-xs-12 header__logo">
           <img src="assets/img/logo-tall.svg" alt="">
+          <img src="assets/img/search-icon.png" alt="" class="header__nav--hidden2">
         </div>
         <nav class="col-xs-12 header__nav">
           <ul>
-            <li>library</li>
-            <li>news</li>
-            <li>resources</li>
-            <li>jobs</li>
-            <li>about</li>
+            <img src="assets/img/logo-tall.svg" alt="" class="header__nav--hidden1">
+            <li class="header__nav--hover">library</li>
+            <li class="header__nav--hover">news</li>
+            <li class="header__nav--hover">resources</li>
+            <li class="header__nav--hover">jobs</li>
+            <li class="header__nav--hover">about</li>
+            <img src="assets/img/search-icon.png" alt="" class="header__nav--hidden3">
           </ul>
+        </nav>
+        <nav class="col-xs-12 header__mobile">
+          <a href="#" class="header__mobile--hamburger">&#9776;</a>
+          <img src="assets/img/logo-tall.svg" alt="" class="header__mobile--logo">
+          <img src="assets/img/search-icon.png" alt="" class="header__mobile--icon">
         </nav>
       </div>
     </header>
-    <section>
-      <div class="row">
-        <div class="col-xs-12 library">
-          <div class="col-xs-12 library__img">
-            <img src="assets/img/method_podcast.png" alt="" class="col-xs-12">
-            <h1>Method Podcast, Episode 1</h1>
-            <h3>Prototyping, tools, and designers who code: A conversation with Jay Wong of Project Fi</h3>
-            <p class="col-xs-8">Hosted by Interaction Designer Aidan Simpson, the Method podcast profiles designers at Google, giving listeners an inside look at their journeys and design choices. In the first episode, Aidan interviews UX Design Lead Jay Wong about her experience working as a designer with a computer science degree, some of the design decisions and challenges her team tackles on Project Fi, and much, much more.</p>
-          </div>
-        </div>
-        <hr>
-        <div class="col-xs-12 news">
-          <div class="col-xs-6 news__1">
-            <h3>Newsfeed</h3>
-            <p class="news__1--date">06/13/2017</p>
-            <h3>A New and Improved Google Design</h3>
-            <img src="assets/img/news-google-design.jpg" alt="" class="news__1--img">
-            <p>e've got a fresh, new look! Now it's easier than ever to find the articles, news, and tools you love right from the homepage. Take a few minutes to explore our new story collections for in-depth insights on everything from branding to SPAN, and visit our new and improved jobs page to find out what it's really like to work with us. We've got a few more surprises in store, so sign up for our newsletter and keep an eye on design.google.</p>
-          </div>
-          <div class="col-xs-6 news__2">
-            <p class="news__2--more">more news</p>
-            <p class="news__2--date">06/15/2017</p>
-            <h3>Join the Material Gallery Early Adopter Program</h3>
-            <p>Like staying ahead of the curve when it comes to design tools? Meet Gallery, a design collaboration app that makes it easy to find, present, and discuss work from a shared, central place. Brought to you by the Material Design team</p>
-            <p class="news__2--date">06/08/2017</p>
-            <h3>Google Design Medium Round-Up</h3>
-            <p>Check out a handful of our latest and greatest Medium articles: Learn how Google redesigned over 2,000 emoji to make them more expressive than ever; Watch the top design talks from I/O 2017 in our Definitive Design Guide</p><p class="news__2--more">more news</p>
-            <p class="news__2--date">05/10/2017</p>
-            <h3>Material Components for Android, iOS, and the Web</h3>
-            <p>Making Material just got easier. The new Material Components site features a library of components and expanded documentation that let you build easily for Android, iOS, and the web using open-source code. </p>
-            <div class="news__2--box col-xs-12">
-              <div class="col-xs-10">
-                <p>Want to stay up-to-date with Google Design?</p>
-                <a href="#">Sign up for our Newsletter</a>
-              </div>
-              <div class="col-xs-2">
-                <img src="assets/img/gdlogo.png" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="row library">
+      <div class="col-xs-12 library__img">
+        <img src="assets/img/method_podcast.png" alt="" class="library__img--item">
+        <h1 class="library__img--title">Method Podcast, Episode 1</h1>
+        <h2>Prototyping, tools, and designers who code: A conversation with Jay Wong of Project Fi</h2>
+        <p class="col-xs-12 col-md-6">Hosted by Interaction Designer Aidan Simpson, the Method podcast profiles designers at Google, giving listeners an inside look at their journeys and design choices. In the first episode, Aidan interviews UX Design Lead Jay Wong about her experience working as a designer..</p>
       </div>
     </section>
     <hr>
-    <section>
-      <div class="row">
-        <div class="col-xs-12 articles">
-
+    <section class="row news">
+      <div class="col-xs-12 col-md-6 news__1">
+        <h2>Newsfeed</h2>
+        <p class="news__1--date">06/13/2017</p>
+        <h3>A New and Improved Google Design</h3>
+        <img src="assets/img/news-google-design.jpg" alt="" class="news__1--img">
+        <p>We've got a fresh, new look! Now it's easier than ever to find the articles, news, and tools you love right from the homepage. Take a few minutes to explore our new story collections for in-depth insights on everything from branding to SPAN, and visit our new and improved jobs page to find out what it's really like to work with us. We've got a few more surprises in store, so sign up for our newsletter and keep an eye on design.google.</p>
+      </div>
+      <div class="col-xs-12 col-md-6 news__2">
+          <a href="#">MORE NEWS</a>
+          <p class="news__2--date">06/15/2017</p>
+          <h3>Join the Material Gallery Early Adopter Program</h3>
+          <p>Like staying ahead of the curve when it comes to design tools? Meet Gallery, a design collaboration app that makes it easy to find, present, and discuss work from a shared, central place. Brought to you by the Material Design team</p>
+          <p class="news__2--date">06/08/2017</p>
+          <h3>Google Design Medium Round-Up</h3>
+          <p>Check out a handful of our latest and greatest Medium articles: Learn how Google redesigned over 2,000 emoji to make them more expressive than ever; Watch the top design talks from I/O 2017 in our Definitive Design Guide</p>
+          <p class="news__2--date">05/10/2017</p>
+          <h3>Material Components for Android, iOS, and the Web</h3>
+          <p>Making Material just got easier. The new Material Components site features a library of components and expanded documentation that let you build easily for Android, iOS, and the web using open-source code. </p>
+          <div class="news__2--box col-xs-12">
+            <div class="col-xs-10">
+              <p>Want to stay up-to-date with Google Design?</p>
+              <a href="#">Sign up for our Newsletter</a>
+            </div>
+            <div class="col-xs-2">
+              <img src="assets/img/gdlogo.png" alt="">
+            </div>
+          </div>
         </div>
+    </section>
+    <hr>
+    <section class="row articles">
+      <div class="col-xs-12 col-md-6 articles__1">
+        <img src="assets\img\connectivity_culture.jpg" alt="" class="articles__1--item">
+        <h2>Connectivity, Culture, and Credit</h2>
+        <p>Nine ways designers can be more empathic and effective when creating products for emerging markets</p>
+        <span>Guide</span>
+      </div>
+      <div class="col-xs-12 col-md-6 articles__2">
+        <img src="assets\img\Migration_IO.png" alt="" class="articles__2--item">
+        <h2>I/O 2017 Design Coverage</h2>
+        <p>Get the most out of #io17 with our guide to designer-focused events and talks</p>
+        <span><img src="assets\img\icon-redirection.png" alt="" class="articles__2--icon">medium.com</span>
+      </div>
+      <div class="col-xs-12 col-md-6 articles__3">
+        <img src="assets\img\building_better.jpg" alt="" class="articles__3--item">
+        <h2>Building Better Design Culture</h2>
+        <p>A conversation with Google’s Mike Buzzard on creativity, career advancement, and criteria for success</p>
+        <span>Editorial</span>
+      </div>
+      <div class="col-xs-12 col-md-6 articles__4">
+        <img src="assets\img\agi.jpg" alt=""  class="articles__4--item" >
+        <h2>Seoul: Printed Matter, Politics, and Performance</h2>
+        <p>Four studios talk about the current design scene in South Korea’s capital</p>
+        <span><img src="assets\img\icon-redirection.png" alt="" class="articles__2--icon">medium.com</span>
+      </div>
+      <div class="col-xs-12 col-md-6 articles__5">
+        <img src="assets\img\daydream.jpg" alt=""  class="articles__5--item">
+        <h2>Speaking Volumes</h2>
+        <p>Best practices for designing a brand in VR</p>
+        <span>Case Study</span>
+      </div>
+      <div class="col-xs-12 col-md-6 articles__6">
+        <hr>
+        <h2>We used the guidelines as an inspiration to go further, and spent a lot of time considering what they meant and how to put them into practice.</h2>
+        <img src="assets\img\asana.jpg" alt="" class="articles__6--item-little">
+        <p>Sarah Chandler<br>Asana: Productivity with Personality</p>
       </div>
     </section>
+    <hr>
+    <section class="row carousel">
+      <div class="col-xs-12 carousel__title">
+        <h2>Brand Recognition</h2>
+        <a href="#">VIEW COLLECTION</a>
+      </div>
+      <div class="col-xs-12 col-md-4 carousel__item1">
+        <h2>From VR to hardware, this collection of articles will guide and inspire you to do your best branding work</h2>
+      </div>
+      <div class="col-xs-12 col-md-4 carousel__item2">
+        <img src="assets/img/daydream.jpg" alt="" class="carousel__item2--img">
+        <h2>Speaking Volumes</h2>
+        <p>Best practices for designing a brand in VR</p>
+        <span>Case Study</span>
+      </div>
+      <div class="col-xs-12 col-md-4 carousel__item3">
+        <img src="assets/img/expressing_brand_in_material.jpg" alt="" class="carousel__item3--img">
+        <h2>Expressing Brand in Material</h2>
+        <p>A step-by-step guide to staying on brand while going Material</p>
+        <span>Editorial</span>
+      </div>
+    </section>
+    <hr>
+    <section class="row articles">
+      <div class="col-xs-12 col-md-6 articles__1">
+        <img src="assets\img\sticky_conversations.jpg" alt="" class="articles__1--item">
+        <h2>Sticky Conversations</h2>
+        <p>Allo sticker sets balance the universal and unique</p>
+        <span>Case Study</span>
+      </div>
+      <div class="col-xs-12 col-md-6 articles__2">
+        <img src="assets\img\digital_natives.jpg" alt="" class="articles__2--item">
+        <h2>No Such Thing as Offline</h2>
+        <p>Digital natives are redesigning the way we build tech one tap at a time</p>
+        <span>Editorial</span>
+      </div>
+      <div class="col-xs-12 col-md-6 articles__3">
+        <img src="assets\img\guide_to_span.jpg" alt="" class="articles__3--item">
+        <h2>Guide to SPAN Tokyo</h2>
+        <p>Watch archived video from our Tokyo event and get to know each of the speakers, including Deyan Sudjic, Mariya Suzuki, and Keiichi Tanaami</p>
+        <span>Guide</span>
+      </div>
+      <div class="col-xs-12 col-md-6 articles__4">
+        <img src="assets\img\airbnb.jpg" alt="" class="articles__4--item">
+        <h2>Airbnb: Communicating Clarity and Charm</h2>
+        <p>How a trusted travel app plays host to a growing, global community</p>
+        <br>
+        <span>Editorial</span>
+      </div>
+      <div class="col-xs-12 col-md-6 articles__5">
+        <hr>
+        <h2>As the playful dots animate into Google’s signature G, the subtle piano sound resolves into a G chord to match.</h2>
+        <img src="assets\img\conor-o-sullivan.png" alt="" class="articles__5--img-circle">
+        <span>Conor</span>
+      </div>
+      <div class="col-xs-12 col-md-6 articles__6">
+        <img src="assets\img\volume_two.jpg" alt="" class="articles__6--item">
+        <h2>No Such Thing as Offline</h2>
+        <p>Digital natives are redesigning the way we build tech one tap at a time</p>
+        <span>Editorial</span>
+      </div>
+    </section>
+    <hr>
+    <section class="row carousel">
+      <div class="col-xs-12 carousel__title">
+        <h2>The Latest</h2>
+      </div>
+      <div class="col-xs-12 col-md-4 carousel__item1">
+        <img src="assets/img/design.google_library.jpg" alt="" class="carousel__item1--img">
+        <p>Get to know the ✨🆕✨ #GoogleDesign: Start with our 📚, it’s chock full of stories, guides & inspo to 🚀 your projects: http://design.google/library</p>
+        <img src="assets/img/twitter.svg" alt="" class="carousel__item1--social-media">
+      </div>
+      <div class="col-xs-12 col-md-4 carousel__item2">
+        <img src="assets/img/gallery_present_2to1.png" alt="" class="carousel__item2--img">
+        <p>Like staying ahead of the curve when it comes to design tools? Meet Gallery, a design collaboration app that makes it easy to find, present, and discuss work from a shared, central place.</p>
+        <img src="assets/img/fb.png" alt="" class="carousel__item1--social-media">
+      </div>
+      <div class="col-xs-12 col-md-4 carousel__item3">
+        <img src="assets/img/method_podcast.png" alt="" class="carousel__item3--img">
+        <p>👂 to the debut of our new podcast → Method! In Ep1 @Aidan_simpson interviews @jaylovespie on @projectfi & lots more: http://goo.gl/FPW7Kr</p>
+        <img src="assets/img/twitter.svg" alt="" class="carousel__item1--social-media">
+      </div>
+    </section>
+    <hr>
+    <section class="row articles">
+      <div class="col-xs-12 col-md-6 articles__1">
+        <img src="assets\img\span_la.jpg" alt="" class="articles__1--item">
+        <h2>SPAN 2016: Los Angeles</h2>
+        <p>Explore everything from Processing and robotics to production design at our Los Angeles conference</p>
+        <span><img src="assets\img\icon-redirection.png" alt="" class="articles__2--icon">design.google</span>
+      </div>
+      <div class="col-xs-12 col-md-6 articles__2">
+        <img src="assets\img\design_is_never_done.jpg" alt="" class="articles__2--item">
+        <h2>Design Is Never Done</h2>
+        <p>Material Design’s new suite of tools and guidelines—all in one place</p>
+        <span>Editorial</span>
+      </div>
+      <div class="col-xs-12 col-md-6 articles__3">
+        <img src="assets\img\material_design_awards.jpg" alt="" class="articles__3--item">
+        <h2>Material Design Awards 2016</h2>
+        <p>Recognizing best-in-class designs from around the community</p>
+        <span>Editorial</span>
+      </div>
+      <div class="col-xs-12 col-md-6 articles__4">
+        <hr>
+        <h2>In celebration of the SPAN LA event, we put together a handy cheat sheet of three things you might like to know about each speaker as well as video links to all the talks.</h2>
+        <img src="assets\img\GD17_Favicon_192.png" alt="" class="articles__4--img">
+        <span>Google Design Guide to SPAN LA</span>
+      </div>
+    </section>
+    <hr>
+    <footer class="row footer">
+      <div class="col-xs-4 footer__top">
+        <h4>Google Design</h4>
+        <p>Google Design is a cooperative effort led by a group of designers, writers, and developers at Google. We work across teams to publish original content, produce events, and foster creative and educational partnerships that advance design and technology.</p>
+      </div>
+      <div class="col-xs-4 footer__top">
+        <h4>Discover</h4>
+        <ul class="footer__top--list">
+          <li>The Keyword</li>
+          <li>Material Design</li>
+          <li>Google</li>
+        </ul>
+      </div>
+      <div class="col-xs-4 footer__top">
+        <h4>Connect</h4>
+        <ul class="col-xs-3 footer__top--list">
+          <li>Newsletter</li>
+          <li>Google+</li>
+          <li>Twitter</li>
+          <li>YouTube</li>
+        </ul>
+        <ul class="col-xs-3 footer__top--list">
+          <li>Facebook</li>
+          <li>Medium</li>
+          <li>Dribbble</li>
+        </ul>
+      </div>
+      <div class="col-xs-12 footer__below">
+        <img src="assets\img\google-g.svg" alt="">
+        <a href="#" class="footer__below--enlace">Privacy & Terms</a>
+      </div>
+    </footer>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>
